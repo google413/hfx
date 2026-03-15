@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HFX Name Generator</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+margin-top:120px;
+}
+
+h1{
+color:#00ffff;
+}
+
+input{
+padding:12px;
+font-size:18px;
+margin:10px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 25px;
+font-size:18px;
+background:#00ffff;
+border:none;
+cursor:pointer;
+}
+
+#result{
+margin-top:30px;
+font-size:30px;
+color:#00ffcc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HFX Name Generator</h1>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="result"></div>
+
+<script>
+
+function convert(text){
+
+return text
+.replace(/a/g,"ᴀ")
+.replace(/b/g,"ʙ")
+.replace(/c/g,"ᴄ")
+.replace(/d/g,"ᴅ")
+.replace(/e/g,"ᴇ")
+.replace(/f/g,"ꜰ")
+.replace(/g/g,"ɢ")
+.replace(/h/g,"ʜ")
+.replace(/i/g,"ɪ")
+.replace(/j/g,"ᴊ")
+.replace(/k/g,"ᴋ")
+.replace(/l/g,"ʟ")
+.replace(/m/g,"ᴍ")
+.replace(/n/g,"ɴ")
+.replace(/o/g,"ᴏ")
+.replace(/p/g,"ᴘ")
+.replace(/q/g,"ǫ")
+.replace(/r/g,"ʀ")
+.replace(/s/g,"ꜱ")
+.replace(/t/g,"ᴛ")
+.replace(/u/g,"ᴜ")
+.replace(/v/g,"ᴠ")
+.replace(/w/g,"ᴡ")
+.replace(/y/g,"ʏ")
+.replace(/z/g,"ᴢ");
+
+}
+
+function generate(){
+
+let name=document.getElementById("name").value.toLowerCase();
+
+let result="ᴴᶠˣ乄"+convert(name);
+
+document.getElementById("result").innerText=result;
+
+}
+
+</script>
+
+</body>
+</html>

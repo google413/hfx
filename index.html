@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HFX Security</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+margin-top:150px;
+}
+
+h1{
+color:#00ffff;
+}
+
+input{
+padding:12px;
+font-size:18px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 30px;
+font-size:18px;
+background:#00ffff;
+border:none;
+margin-top:20px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HFX Security Access</h1>
+
+<input type="password" id="pass" placeholder="Enter Code">
+
+<br>
+
+<button onclick="login()">Enter</button>
+
+<script>
+
+let password = "HFX999";
+
+function login(){
+
+let p=document.getElementById("pass").value;
+
+if(p===password){
+
+location.href="name.html";
+
+}else{
+
+alert("Wrong Code");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
