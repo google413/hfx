@@ -1,73 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HFX Security</title>
+<title>HFX Esports</title>
 
 <style>
 
 body{
-background:black;
+margin:0;
+font-family:Arial;
+background:linear-gradient(black,#111);
 color:white;
 text-align:center;
-font-family:Arial;
-margin-top:150px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
 h1{
+font-size:50px;
 color:#00ffff;
-}
-
-input{
-padding:12px;
-font-size:18px;
-border-radius:8px;
-border:none;
+text-shadow:0 0 15px #00ffff;
 }
 
 button{
-padding:10px 30px;
-font-size:18px;
-background:#00ffff;
+padding:15px 40px;
+font-size:22px;
+margin:20px;
 border:none;
-margin-top:20px;
+border-radius:10px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.yes{
+background:#00ffff;
+color:black;
+}
+
+.no{
+background:red;
+color:white;
+}
+
+button:hover{
+transform:scale(1.1);
 }
 
 </style>
-
 </head>
 
 <body>
 
-<h1>HFX Security Access</h1>
+<h1>HFX ESPORTS</h1>
 
-<input type="password" id="pass" placeholder="Enter Code">
+<h2>Do you want to change your name?</h2>
 
-<br>
-
-<button onclick="login()">Enter</button>
-
-<script>
-
-let password = "HFX999";
-
-function login(){
-
-let p=document.getElementById("pass").value;
-
-if(p===password){
-
-location.href="name.html";
-
-}else{
-
-alert("Wrong Code");
-
-}
-
-}
-
-</script>
+<button class="yes" onclick="location.href='login.html'">YES</button>
+<button class="no" onclick="alert('Thank you for visiting our website. Enjoy your stay!')">NO</button>
 
 </body>
 </html>
